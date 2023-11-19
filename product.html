@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="icon" sizes="32x32" href="images/istockphoto-1446931674-612x612 (1).png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <Header>
+        <Nav>
+            <a href="index.html"><div class="logo"><h1>carTing</h1></div></a>
+            <div class="searchbar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="" id="" placeholder="Search the items">
+            </div>
+            <ul class="menulist">
+                <li><i class="fa-solid fa-shop"></i>Become a seller</li>
+                <li><i class="fa-regular fa-user"></i>Sign in</li>
+                <li><i class="fa-solid fa-cart-shopping"></i>Cart</li>
+                <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+            </ul>
+        </Nav>
+    </Header>
+    <main class="sub">
+        <section>
+            <div class="product">
+                <img src="" alt="">
+            </div>
+            <div class="content">
+                <h1></h1>
+                <p class="price"></p>
+                <p class="description"></p>
+                <button type="button"><i class="fa-solid fa-cart-shopping"></i>Add to cart</button>
+            </div>
+        </section>
+    </main>
+    <script>
+         document.addEventListener('DOMContentLoaded', () => {
+         const storeImage=localStorage.getItem('img')
+         const storeText=localStorage.getItem('text')
+         const storePrice=localStorage.getItem('price')
+         const storeDesc=localStorage.getItem('desd')
+         document.querySelector('.product img').src=storeImage
+         document.querySelector('.content h1').textContent=storeText
+         document.querySelector('.content .price').textContent="Rs."+" "+storePrice
+         document.querySelector('.content .description').textContent=storeDesc
+         })
+    </script>
+</body>
+</html>
